@@ -49,8 +49,13 @@ async function loginUser(req, res) {
         message: "Contraseña incorrecta",
       });
     }
-    //Pasar el usuario como payload
-    const token = jwt.sign("DATO PARA PAYLOAD", JWT_PASSWORD);
+    const payload = {
+      id: currentUser._id,
+      name: currentUser.name,
+      lastname: currentUser.lastname,
+      email: currentUser.email,
+    };
+    const token = jwt.sign(payload, JWT_PASSWORD);
     res.status(200).json({
       success: true,
       message: "Usuario Logueado",

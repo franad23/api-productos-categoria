@@ -29,7 +29,7 @@ async function updateUser(id, user) {
 async function getUserByEmail(email) {
     return await User.findOne({
         email,
-        deleted: false
+        deleted: false //Softdelete
     })
 }
 
