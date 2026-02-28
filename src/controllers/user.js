@@ -59,7 +59,10 @@ async function loginUser(req, res) {
     res.status(200).json({
       success: true,
       message: "Usuario Logueado",
-      data: token,
+      data: {
+        token,
+        user: payload,
+      },
     });
   } catch (error) {
     res.status(500).json({
