@@ -21,7 +21,12 @@ productRoutes.post(
 );
 productRoutes.get("/", getAllProductsController);
 productRoutes.get("/:id", getProductByIdController);
-productRoutes.patch("/:id", updateProductController);
-productRoutes.delete("/:id", deleteProductController);
+productRoutes.patch("/:id",
+  verifyToken,
+  productRules,
+  validateRequest,
+  updateProductController
+);
+productRoutes.delete("/:id", verifyToken, deleteProductController);
 
 export default productRoutes;

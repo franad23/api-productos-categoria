@@ -1,10 +1,10 @@
 import { v2 as cloudinary } from "cloudinary";
-import { CLOUDINARY_APIKEY } from "../config/env.js";
+import { CLOUDINARY_APIKEY, CLOUDINARY_CLOUDNAME, CLOUDINARY_SECRET } from "../config/env.js";
 
 cloudinary.config({
-  cloud_name: "ddjvhm7qo",
-  api_key: "416586415788914",
-  api_secret: CLOUDINARY_APIKEY,
+  cloud_name: CLOUDINARY_CLOUDNAME,
+  api_key: CLOUDINARY_APIKEY,
+  api_secret: CLOUDINARY_SECRET,
 });
 
 const uploadImage = async (req, res) => {
@@ -34,7 +34,6 @@ const uploadImage = async (req, res) => {
       success: true,
       message: "Imagen subida correctamente",
       imageUrl: result.secure_url,
-      publicId: result.public_id,
     });
   } catch (error) {
     console.error(error);
