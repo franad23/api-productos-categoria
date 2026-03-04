@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --inspect ./src/index.js"
+    "dev": "nodemon --inspect ./src/index.js",
+    "build": "echo \"no build needed\""
   },
   "keywords": [],
   "author": "",
