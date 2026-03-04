@@ -3,6 +3,7 @@ import userRoutes from "./users.js";
 import productRoutes from "./product.js";
 import categoryRoutes from "./category.js";
 import imagesRoutes from "./images.js";
+import mongoose from "mongoose";
 
 const router = Router();
 
@@ -23,7 +24,6 @@ const state = mongoose.connection.readyState;
     let error = null;
 
     try {
-        // Intentamos hacer ping real a la DB
         if (state === 1) {
             await mongoose.connection.db.admin().ping();
         }
