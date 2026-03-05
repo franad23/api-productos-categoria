@@ -1,0 +1,71 @@
+PRIMERO ANTES QUE NADA:
+
+1. Crear Repos (Front y back) Y Estructura de carpetas
+2. Trello (Resources, Backlog, TODO, Blocked, Code Review, Testing, Done)
+3. Invitar a compañeros al Repo
+4. Definir Nombre de Negocio, colores, tipografia, iconos, convencion de codigo (ESP o EN, camelCase, PascalCase, snake_case)
+
+GIT
+
+1. git clone SSH/URL -> Clonar Repo
+2. git status estado de cambios (ROJO -> WD, Verde -> Stating)
+3. git add . ->  Agrega los archivos al area de Staging
+4. git commit -m 'MENSAJE' commitea cambios
+5. git checkout -b 'RAMA' -> CREA RAMA
+6. git checkout RAMA -> Cambia entre ramas
+7. git push origin NOMBRE RAMA Envia cambios a github
+8. git pull origin RAMA -> Trae cambios de github segun RAMA
+9. git pull origin --rebase RAMA ->  Trae cambios de github segun RAMA
+10. git stash -> A los cambio los guarda de manera temporal
+11. git stash pop ->  Suelta los cambios del temporal 
+!IMPORANTE 
+el stash y stash pop se usan normalmente para traer cambios cuando estoy trabajando en un rama
+ANTES DE HACER PUSH SIEMPRE HACER UN REBASE y luego la PR 
+
+CONVENCION NOMBRE DE TICKETS
+Feat o Feature/NOMBRE TICKET DE TRELLO para caracteristicas nuevas
+Bug o Fix/NOMBRE DE TICKET para bugs/errores encontrados
+
+!IMPORTANTE -> TODOS LOS TICKETS DE TRELLO CON NOMBRE Y DESCRIPCION
+
+Estructura de Carpetas 
+    Front (Vite)
+        Dentro de SRC:
+        config
+        components
+        pages
+        helpers
+        assets (Imanges, iconos)
+        services (Llamadas a API)
+    Backend
+        Dentro de SRC:
+        middlewares
+        models
+        routes
+        config
+        services
+        controllers
+        helpers
+
+Consideraciones en el Front
+    Rutas (React-Router) Protegidas (LS y JWT) y publicas
+    Formularios validados
+
+Consideraciones en el Backend   
+    Rutas Protegidas (JWT) y publicas
+    Express Validator
+    Hashear Passwords (bcrypt)
+    Conectar la DB (Mongo Atlas/Compass)
+    Probar endpoints con ThunderClient Postman
+
+
+SI O SI O SI Proyecto DEPLOYADO 
+Front ->  Vercel
+Back -> Render
+
+Endpoint en POSTMAN
+
+Proyecto 1: Proyecto Final - Canchas.pdf -> Team 2
+Proyecto 2: Proyecto Final - Gestion de Restaurantes.pdf -> Team 4
+Proyecto 3: Proyecto Final - RollingVet.pdf -> Team 3
+Proyecto 4: Proyecto Final - Gestion de hoteles.pdf -> Team 1
